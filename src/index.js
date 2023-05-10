@@ -1,6 +1,13 @@
 import _ from 'lodash';
 import './assets/style/style.css';
 import demoImg from './assets/img/demo.jpg';
+// 默认支持JSON文件
+import jsonData from './assets/json/demo.json';
+
+// csv
+import csvData from "./assets/test.csv";
+// xml
+import xmlData from "./assets/test.xml";
 
 function component() {
   const element = document.createElement('div');
@@ -12,7 +19,7 @@ function component() {
 
   const img = new Image();
   img.src = demoImg;
-  img.className = 'img'
+  img.className = 'img';
 
   element.appendChild(img);
 
@@ -20,3 +27,7 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+console.log('jsonData', jsonData);
+console.log('csvData', csvData);
+console.log('xmlData', xmlData);

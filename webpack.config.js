@@ -19,6 +19,14 @@ module.exports = {
       {
         test: /\.(woff|woff2|ttf|otf)$/,
         type: 'asset/resource'
+      },
+      {
+        test: /\.(csv|tsv)$/,
+        use: 'csv-loader'
+      },
+      {
+        test: /\.xml$/,
+        use: 'xml-loader'
       }
     ]
   }
