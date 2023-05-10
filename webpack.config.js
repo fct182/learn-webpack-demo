@@ -1,8 +1,9 @@
 const path = require('path');
 // HTML模板中 BASE_URL 变量的设置
-const { DefinePlugin } = require("webpack");
+const { DefinePlugin } = require('webpack');
 
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   // entry: './src/index.js',
@@ -15,7 +16,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     // filename: 'bundle.js'
     // 多入口配置
-    filename: '[name].bundle.js'
+    filename: '[name].bundle.js',
+    // 第一种方法: 清理dist文件夹
+    clean: true
   },
   module: {
     rules: [
@@ -43,11 +46,14 @@ module.exports = {
   },
   plugins: [
     new DefinePlugin({
-      BASE_URL: "'./'"
+      BASE_URL: "'../public/'"
     }),
+    // 管理index.html模板插件
     new htmlWebpackPlugin({
       title: '管理输出',
       template: './public/index.html'
-    })
+    }),
+    // 第二种方法: 打包前清除dist目录
+    // new CleanWebpackPlugin()
   ]
-}
+};

@@ -8,6 +8,7 @@
     "build": "webpack"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.3",
     "csv-loader": "^3.0.5",
     "html-webpack-plugin": "^5.5.1",
