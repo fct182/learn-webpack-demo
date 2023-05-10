@@ -1,6 +1,6 @@
 import _ from 'lodash';
-import './style.css';
-import demoImg from './demo.jpg';
+import './assets/style/style.css';
+import demoImg from './assets/img/demo.jpg';
 
 function component() {
   const element = document.createElement('div');
