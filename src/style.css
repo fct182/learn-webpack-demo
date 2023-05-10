@@ -6,3 +6,15 @@
   width: 200px;
   height: 200px;
 }
+
+@font-face {
+  font-family: 'customFont';
+  src: url('./assets/font/Alimama_DongFangDaKai_Regular.woff2') format('woff2'),
+    url('./assets/font/Alimama_DongFangDaKai_Regular.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  font-family: 'customFont';
+}
